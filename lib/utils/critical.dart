@@ -2,9 +2,9 @@ import 'package:patient_management/models/patient_records.dart';
 
 isCritical(List<Records> records) {
   if (records.isEmpty) return false;
-  records.sort((a, b) => DateTime.parse(b.date.toString())
-      .compareTo(DateTime.parse(a.date.toString())));
-  Records latestRecords = records[0];
+  // records.sort((a, b) => DateTime.parse(b.date.toString())
+  //     .compareTo(DateTime.parse(a.date.toString())));
+  Records latestRecords = records[records.length - 1];
 
   String bloodPressure = latestRecords.bloodPressure!;
   String respiratoryRate = latestRecords.respiratoryRate!;
